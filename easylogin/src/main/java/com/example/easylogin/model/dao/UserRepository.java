@@ -8,6 +8,5 @@ import org.springframework.stereotype.Repository;
 import com.example.easylogin.model.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-	// 継承されもともとあるメソッドもあるが自己定義もできる？
 	List<User> findByUserNameAndPassword(String userName,String password);
 }
